@@ -13,6 +13,7 @@
 | **自动更新** | 一键从国家统计局抓取最新房价数据（自动默认） |
 | **灵活查询** | 按城市、时间范围、指数类型提取数据 |
 | **可视化** | 生成趋势图、对比图等多种图表 |
+| **年度汇总** | 生成年度趋势汇总图表 |
 | **一键分析** | 快速生成完整的分析报告 |
 | **自然语言** | 支持自然语言交互，如"帮我更新房价数据" |
 | **多格式导出** | 支持CSV、Excel、JSON格式导出 |
@@ -144,7 +145,7 @@ python scripts/yearly_trend.py --cities 北京 上海 广州 深圳 --start 2016
 │   ├── update_price.py        # 更新数据（自动默认）
 │   ├── extract_price.py       # 提取数据
 │   ├── generate_chart.py      # 生成图表
-│   ├── validate_price.py      # 校验数据
+│   ├── yearly_trend.py        # 年度趋势汇总
 │   └── quick_analysis.py      # 一键分析
 ├── assets/                     # 资源文件
 │   └── chart_config.yaml
@@ -164,11 +165,11 @@ python scripts/yearly_trend.py --cities 北京 上海 广州 深圳 --start 2016
 ### `/gen-price-chart`
 生成房价趋势图表。
 
-### `/quick-select-price`
-一键完成数据提取、校验和图表生成。
+### `/yearly-trend`
+生成年度平均房价趋势汇总图表，适合多年对比分析。
 
-### `/validate-price`
-验证数据完整性和一致性。
+### `/quick-select-price`
+一键完成数据提取和图表生成。
 
 详细用法请参考[用户手册](docs/USER_GUIDE.md)。
 
