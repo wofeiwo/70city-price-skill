@@ -1,0 +1,41 @@
+# 70城房价数据图表配置
+
+# 默认配色方案
+colors:
+  default:
+    - "#E53935"  # 红色
+    - "#1E88E5"  # 蓝色
+    - "#43A047"  # 绿色
+    - "#FB8C00"  # 橙色
+    - "#8E24AA"  # 紫色
+    - "#00897B"  # 青色
+    - "#3949AB"  # 深蓝
+    - "#C0CA33"  # 黄绿
+    - "#F4511E"  # 深橙
+    - "#5D4037"  # 棕色
+
+  positive: "#43A047"  # 上涨颜色
+  negative: "#E53935"  # 下跌颜色
+  neutral: "#9E9E9E"   # 持平颜色
+
+# 图表默认设置
+chart:
+  width: 12
+  height: 6
+  dpi: 150
+
+# 导出设置
+export:
+  formats:
+    - png
+    - svg
+    - pdf
+  default_format: "png"
+
+# 示例配置
+examples:
+  cities:
+    - 北京
+    - 上海
+    - 广州
+    - 深圳
