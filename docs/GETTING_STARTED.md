@@ -25,7 +25,7 @@ pip install -r requirements.txt
 ### 2. 验证安装
 
 ```bash
-python scripts/validate_price.py
+python scripts/update_price.py
 ```
 
 ## 快速示例
@@ -49,7 +49,13 @@ python scripts/extract_price.py city 北京 上海
 python scripts/generate_chart.py --cities 北京 上海 --start 202001 --end 202412
 ```
 
-### 示例4：一键分析
+### 示例4：年度趋势汇总
+
+```bash
+python scripts/yearly_trend.py --cities 北京 上海 广州 深圳 --start 2016 --end 2025
+```
+
+### 示例5：一键分析
 
 ```bash
 python scripts/quick_analysis.py --cities 北京 上海 广州 深圳

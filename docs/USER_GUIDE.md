@@ -9,8 +9,8 @@
 | /update-70city-price | 更新房价数据（自动默认） |
 | /select-city-price | 提取房价数据 |
 | /gen-price-chart | 生成房价图表 |
+| /yearly-trend | 年度趋势汇总 |
 | /quick-select-price | 一键分析 |
-| /validate-price | 校验数据 |
 
 ## update_price - 更新数据
 
@@ -25,7 +25,6 @@ python scripts/update_price.py [URL] [选项]
 | 参数 | 说明 |
 |------|------|
 | URL | 国家统计局发布页URL（可选） |
-| --validate | 更新后执行数据校验 |
 
 ### 使用示例
 
@@ -77,10 +76,22 @@ python scripts/generate_chart.py --cities 北京 上海
 python scripts/generate_chart.py --cities 北京 上海 --type bar
 ```
 
-## validate_price - 校验数据
+## yearly_trend - 年度趋势汇总
+
+### 命令语法
 
 ```bash
-python scripts/validate_price.py
+python scripts/yearly_trend.py --cities <城市列表> [选项]
+```
+
+### 使用示例
+
+```bash
+# 北上广深十年趋势
+python scripts/yearly_trend.py --cities 北京 上海 广州 深圳 --start 2016 --end 2025
+
+# 自定义输出
+python scripts/yearly_trend.py --cities 北京 --start 2020 --end 2025 --output trend.png
 ```
 
 ## quick_analysis - 一键分析

@@ -85,36 +85,36 @@ for city in 北京 上海 广州 深圳; do
 done
 ```
 
-### 8. 数据校验
-
-```bash
-python scripts/validate_price.py --verbose
-```
-
 ## 自然语言示例
 
-### 9. 更新数据
+### 8. 更新数据
 
 ```bash
 python scripts/update_price.py
 ```
 
-### 10. 查询北京房价
+### 9. 查询北京房价
 
 ```bash
 python scripts/extract_price.py city 北京
 ```
 
-### 11. 生成趋势图
+### 10. 生成趋势图
 
 ```bash
 python scripts/generate_chart.py --cities 北京
 ```
 
-### 12. 一键分析
+### 11. 一键分析
 
 ```bash
 python scripts/quick_analysis.py --cities 北京 上海
+```
+
+### 12. 年度趋势汇总
+
+```bash
+python scripts/yearly_trend.py --cities 北京 上海 广州 深圳 --start 2016 --end 2025
 ```
 
 ## 完整工作流
@@ -123,7 +123,7 @@ python scripts/quick_analysis.py --cities 北京 上海
 
 ```bash
 # 1. 更新数据
-python scripts/update_price.py --validate
+python scripts/update_price.py
 
 # 2. 生成图表
 python scripts/generate_chart.py --cities 北京 上海 --start 202301 --end 202412 -o latest.png
@@ -139,7 +139,6 @@ python scripts/extract_price.py month 202401 202412 -o data_2024.csv
 | 城市近N年趋势 | extract + generate_chart |
 | 月度数据对比 | extract month + generate_chart --type bar |
 | **年度趋势汇总** | **yearly_trend.py** |
-| 数据质量检查 | update + validate |
 
 ## 更多示例
 
@@ -155,43 +154,37 @@ python scripts/generate_chart.py --cities 北京 上海 广州 深圳 --start 20
 python scripts/generate_chart.py --cities 北京 上海 广州 深圳 --type bar --fixedbase 同比
 ```
 
-### 15. 数据校验
-
-```bash
-python scripts/validate_price.py
-```
-
-### 16. 查看可用城市列表
+### 15. 查看可用城市列表
 
 ```bash
 python scripts/extract_price.py list-cities
 ```
 
-### 17. 查看数据时间范围
+### 16. 查看数据时间范围
 
 ```bash
 python scripts/extract_price.py list-dates
 ```
 
-### 18. 按特定指数类型提取
+### 17. 按特定指数类型提取
 
 ```bash
 python scripts/extract_price.py city 北京 上海 --fixedbase 环比
 ```
 
-### 19. 一键完整分析
+### 18. 一键完整分析
 
 ```bash
 python scripts/quick_analysis.py --cities 北京 上海 广州 深圳 --start 201601 --end 202512
 ```
 
-### 20. 导出为Excel格式
+### 19. 导出为Excel格式
 
 ```bash
 python scripts/extract_price.py city 北京 上海 广州 深圳 -o cities.xlsx
 ```
 
-### 21. 导出为JSON格式
+### 20. 导出为JSON格式
 
 ```bash
 python scripts/extract_price.py month 202401 202412 -o data.json
